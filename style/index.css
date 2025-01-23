@@ -1,11 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Libre+Franklin:ital,wght@0,100..900;1,100..900&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
 *{
   margin: 0;
   padding: 0;
   box-sizing: border-box;
 }
 
-body{
+a{
+  text-decoration: none;
+  color: black;
+}
+
+html, body{
   background-color: rgb(255, 255, 255);
+  height: 100%;
+  font-family: Montserrat Alternates;
 }
 header{
   height: 100px;
@@ -14,6 +23,7 @@ header{
 .body-wrapper{
   position: relative;
   width: 100%;
+  height: 100%;
   overflow: hidden;
 }
 .logo{
@@ -41,6 +51,7 @@ header{
   position: relative;
   border-radius: 50px;
   z-index: 10;
+  cursor: pointer;
 }
 .header-burger span{
   position: absolute;
@@ -57,6 +68,7 @@ header{
 .header-burger span:nth-child(3){
   transform: translateY(8px);
 }
+.photo{display: none;}
 
 @media screen and (width <= 900px) {
   
@@ -64,7 +76,7 @@ header{
     position: relative;
     width: 70%;
     background-color: rgb(255, 255, 255);
-    height: 500px;
+    height: 100vh;
     top: -100px;
     right: -100%;
     transition: transform 1s ease-in-out, box-shadow .5s;
@@ -88,5 +100,51 @@ header{
   .body-wrapper.open .header-burger span:nth-child(3){
     transform: translateY(0) rotate(45deg);
   }
+  .content-menu{
+    height: 85%;
+    margin: 23px 20px;
+  }
+  .block1{
+    display: flex;
+    flex-direction: column;
+    height: 130px;
+    justify-content: space-between;
+    border-bottom: 1px solid rgb(185, 185, 185);
+    border-top: 1px solid rgb(185, 185, 185);
+    padding: 20px 0;
+  }
+  .user{
+    display: flex;
+    flex-direction: row;
+    margin-top: 25px;
+    margin-left: 20px;
+  }
+  .photo-user{
+    width: 50px;
+    height: 50px;
+    border-radius: 50px;
+    border: 1px solid gray;
+    position: relative;
+  }
+  .name-user{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    margin-left: 10px;
+  }
+  .photo{
+    display: unset;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50px;
+    object-fit: cover;
+    box-shadow: 2px 3px 10px 2px rgba(0, 0, 0, 0.3);
+  }
+
+
+
+
 
 }

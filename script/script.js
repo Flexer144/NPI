@@ -1,9 +1,10 @@
-let menu = document.querySelector('.body-wrapper')
+let button = document.querySelector('.header-burger')
+let bodyWrapper = document.querySelector('.body-wrapper')
 
-menu.addEventListener('click', ()=>{
-  if(!menu.classList.contains('open')){
-    menu.classList.add('open')
-  } else if(menu.classList.contains('open')){
-    menu.classList.remove('open')
+button.addEventListener('click', ()=>{
+  if(!bodyWrapper.classList.contains('open')){
+    bodyWrapper.classList.add('open')
+  } else if(bodyWrapper.classList.contains('open')){
+    bodyWrapper.classList.remove('open')
   }
 })
